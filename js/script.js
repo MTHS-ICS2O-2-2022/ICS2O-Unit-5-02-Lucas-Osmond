@@ -14,14 +14,13 @@ const randomNegativeNumber = Math.floor((Math.random() * 6) + 1) * -1 // returns
  * This function updates a slider value.
  */
 function myButtonClicked () {
-  // this function updates the slider value
-  const valueFromSlider = parseInt(document.getElementById('guessed-number').value)
+  const alwaysOnButtonChecked = document.getElementById('on-check').checked
 
   if (alwaysOnButtonChecked == true) {
-    document.getElementById("radio-button-value").innerHTML =
-    "<p>Value is: Positive</p>"
+    document.getElementById("answer").innerHTML =
+    "You got " + randomNumber
   } else {
-    document.getElementById("radio-button-value").innerHTML =
-    "<p>Value is: Negative</p>"
+    document.getElementById("answer").innerHTML =
+  "You got " + randomNegativeNumber
   }
 }
